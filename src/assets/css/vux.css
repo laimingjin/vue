@@ -1,0 +1,390 @@
+/**
+* vue-router transition 左右进出
+*/
+
+.vux-pop-out-transition,
+.vux-pop-in-transition {
+  width: 100%;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  backface-visibility: hidden;
+}
+
+.vux-pop-out-enter,
+.vux-pop-out-leave,
+.vux-pop-in-enter,
+.vux-pop-in-leave {
+  will-change: transform;
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.vux-pop-out-enter {
+  animation-name: popInLeft;
+}
+
+.vux-pop-out-leave {
+  animation-name: popOutRight;
+}
+
+.vux-pop-in-enter {
+  perspective: 1000;
+  animation-name: popInRight;
+}
+
+.vux-pop-in-leave {
+  animation-name: popOutLeft;
+}
+
+@keyframes popInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes popOutLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes popInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes popOutRight {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+
+/**
+* vue-router transition 显隐
+*/
+
+.vux-pop-show-transition,
+.vux-pop-hiden-transition {
+  width: 100%;
+}
+
+
+/* enter 定义进入的开始状态 */
+
+
+/* leave 定义离开的结束状态 */
+
+.vux-pop-hiden-enter {
+  animation: fadein 2s;
+}
+
+.vux-pop-hiden-leave {
+  opacity: 0;
+}
+
+.vux-pop-show-enter {
+  animation: fadein 2s;
+}
+
+.vux-pop-show-leave {
+  opacity: 0;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: .4;
+  }
+  70% {
+    opacity: .8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.a-active {
+  border: 1px solid #1ab394!important;
+}
+
+.heights-3 {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+td {
+  max-width: 270px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@media (max-width: 1600px) {
+  td {
+    max-width: 92px;
+  }
+}
+.heights-4 {
+  height: 788px;
+  overflow-y: auto;
+}
+
+.heights-2 {
+  height: 650px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  background-color: #FFFFFF;
+}
+
+/*公共样式*/
+
+.VeryUrgent,.VeryUrgents {
+  width: 60px;
+  color: #FFFFFF!important;
+  background-color: #d30d15!important;
+}
+
+.urgent,.urgents {
+  width: 60px;
+  color: #FFFFFF!important;
+  background-color: #e24900!important;
+}
+
+.important,.importants {
+  width: 60px;
+  color: #FFFFFF!important;
+  background-color: #1c84c6!important;
+}
+
+.commonly ,.commonlys{
+  width: 60px;
+  color: #FFFFFF!important;
+  background-color: #f3b94f!important;
+}
+
+.p-active {
+  border: 1px solid #333!important
+}
+
+.irs-single {
+  color: #484747;
+  font-size: 10px;
+  line-height: 1.333;
+  text-shadow: none;
+  padding: 1px 5px;
+  background: #D0D0D0;
+  border-radius: 4px;
+  position: absolute;
+  display: block;
+  top: -25px;
+  cursor: default;
+  white-space: nowrap;
+}
+
+.irs-single:after {
+  position: absolute;
+  display: block;
+  content: "";
+  bottom: -6px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -3px;
+  overflow: hidden;
+  border: 3px solid transparent;
+  border-top-color: #D0D0D0;
+}
+
+.irs-from:after {
+  left: 20%;
+}
+
+.irs-to:after {
+  left: 75%;
+}
+
+label {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.bg-active {
+  background-color: #18a689!important;
+  border-color: #18a689!important;
+  color: #FFFFFF!important;
+}
+.bg-active i{
+  color: #fff!important;
+}
+.progress {
+  background-color: #e2e2e2;
+}
+
+.dg {
+  background-color: #f8ac59;
+  color: #f5f5f5;
+  cursor: default;
+}
+
+.dg:hover,
+.red:hover {
+  color: #f5f5f5;
+}
+.red {
+  background-color: #ed5565;
+  color: #F5F5F5;
+  cursor: default;
+}
+.abc img{
+  width: 80%;
+}
+.abc ol, .abc ul{
+  margin-top: 0!important;
+  padding-left: 15px!important;
+  margin-bottom: 0px!important;
+  list-style: inherit;
+}
+.abc ol{
+  display: block;
+  list-style-type: decimal!important;
+}
+.abc ul{
+  display: block;
+  list-style-type: disc!important;
+}
+.abc p{
+  width: 100%;
+  display: inline-block;
+  /*text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;*/
+  word-wrap:break-word;
+}
+.hl_tou{
+  display: inline-block;
+  border-radius: 50%;
+  color: #FFF;
+  font-weight: 500;
+  font-size: 11px;
+  text-align: center;
+  height: 38px;
+  width: 38px;
+  margin: 0 auto;
+  line-height: 38px;
+  background-color: #16987E;
+}
+/*任务延期样式*/
+.task-overtime{
+  color:#b12b40;
+}
+/*检查项样式*/
+.deleteline{
+  text-decoration: line-through;
+  color: #999;
+}
+.simple-subtasks .task {
+  position: relative;
+  padding-left: 36px;
+}
+
+.simple-subtasks .task .icon-add-task {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  line-height: 36px;
+  color: #999;
+  text-align: center;
+}
+
+.subtodo .simple-subtasks textarea {
+  font-size: 16px;
+  height: 36px;
+  outline: none;
+  resize: none;
+  box-shadow: none;
+  border-radius: 0;
+  border-bottom: 1px dashed #ccc!important;
+  font-family: inherit;
+  overflow: hidden;
+  word-wrap: break-word;
+  resize: none;
+}
+
+.simple-subtasks .task textarea {
+  padding: 5px;
+  width: 100%;
+  height: 36px;
+  line-height: 26px;
+  outline: none;
+  resize: none;
+  border: 0;
+  z-index: 1;
+  font-size: 16px;
+  background-color: #fff;
+  box-sizing: border-box;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.simple-subtasks .simple-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 9px;
+  z-index: 2;
+}
+
+.simple-checkbox {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.simple-subtasks .task.add .task-content {
+  color: #999;
+}
+.simple-subtasks .task .task-content {
+  font-size: 16px;
+  margin: 0;
+  padding: 5px;
+  min-height: 26px;
+  line-height: 26px;
+  cursor: pointer;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+.simple-checkbox .checkbox-input{
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
