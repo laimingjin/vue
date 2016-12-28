@@ -37,6 +37,12 @@ router.map({
         }
       }
     }
+  },
+  '/watchExample': {
+    name: 'watchExample',
+    component: function (resolve) {
+      require(['./components/main/watchExample'], resolve)
+    }
   }
 })
 
