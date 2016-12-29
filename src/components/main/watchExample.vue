@@ -7,13 +7,8 @@
     <p>{{ answer }}</p>
   </div>
 </template>
-<style>
-    body{
-        background-color:#ff0000;
-    }
-</style>
-<script src="https://unpkg.com/axios@0.12.0/dist/axios.min.js"></script>
-<script src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>
+
+
 <script>
 export default {
 		  data () {
@@ -21,7 +16,8 @@ export default {
 					question: '',
           answer: 'I cannot give you an answer until you ask a question!'
 				}
-			},
+			}
+			,
 			watch: {
     // 如果 question 发生改变，这个函数就会运行
     question: function (newQuestion) {

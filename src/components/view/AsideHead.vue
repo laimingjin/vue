@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import {listsCounter} from '../vuex/action'
 export default {
 data() {
 			return {
@@ -26,12 +27,18 @@ data() {
 		},
 		methods: {
 			change(){
-				this.setlist(this.ab)
-			},exit(){
+				this.setList(this.ab)
+			},
+			exit(){
 			 this.$route.router.go({
 					path: '/login'
 				})
 			}
+		},
+		vuex:{
+		   action:{
+		       setList:listsCounter
+		   }
 		}
 	}
 </script>

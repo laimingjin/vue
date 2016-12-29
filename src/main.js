@@ -2,6 +2,8 @@ import Vue from 'vue'
 //noinspection JSUnresolvedVariable
 import App from './App'
 import VueRouter from 'vue-router'
+import store from './components/vuex/store'
+
 Vue.use(VueRouter)
 var router = new VueRouter()
 
@@ -51,10 +53,13 @@ router.start(App, '#app')
 
 require('./assets/css/style.css')
 require('./assets/css/vux.css')
-require('./assets/css/font-awesome.css')
+require('./dependencies/css/font-awesome.css')
+require('./dependencies/js/axios.min.js')
+require('./dependencies/js/lodash.min.js')
 
 /* eslint-disable no-new */
 new Vue({
+  store,
   el: 'body',
   components: { App }
 })

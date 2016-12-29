@@ -3,7 +3,7 @@
 		<div class="middle-box text-center loginscreen  animated fadeInDown">
 			<div>
 				<h1 class="logo-name" style="text-align: center;">
-					<img src="../../assets/logo.png" alt="" width="120px"/>
+					<img src="../../assets/image/logo.png" alt="" width="120px"/>
 				</h1>
 			</div>
 			<div class="form-group">
